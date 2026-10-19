@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class paiement {
+public class Paiement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,5 +29,5 @@ public class paiement {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private modepaiement modePaiement;
+    private Modepaiement modePaiement;
 }

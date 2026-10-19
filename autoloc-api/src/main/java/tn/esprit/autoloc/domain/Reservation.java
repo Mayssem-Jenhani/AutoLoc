@@ -6,27 +6,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "contrat")
+@Table(name = "reservation")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class contrat {
+public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idContrat;
+    private Long idReservation;
 
     @Column(nullable = false)
-    private LocalDate dateSignature;
-
-    @Column(nullable = false, precision = 10, scale = 2)
-    private BigDecimal montantTotal;
+    private LocalDate dateDebut;
 
     @Column(nullable = false)
-    private boolean valide;
+    private LocalDate dateFin;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 20)
+    private Statutreservation statut;
 }

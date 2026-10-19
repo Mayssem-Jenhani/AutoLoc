@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class vehicule {
+public class Vehicule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,12 +31,12 @@ public class vehicule {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private categorievehicule categorie;
+    private Categorievehicule categorie;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal tarifJournalier;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private statusVehicule statut;
+    private StatusVehicule statut;
 }
